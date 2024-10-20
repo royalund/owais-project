@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raat ko Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            background-image: url('../Image/bg.gif');
+            padding: 50px;
+        }
+        .container {
+            max-width: 600px;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: auto;
+        }
+        .title {
+            color: green;
+            margin-bottom: 20px;
+        }
+        .input-field {
+            margin-bottom: 15px;
+        }
+        .input-field label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .input-field input, .input-field select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .submit {
+            width: 100%;
+            padding: 10px;
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .submit:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h2>Registration Form</h2>
+        </header>
+        <form action="VoterRegistration.php" method="post" enctype="multipart/form-data">
+            <div class="details personal">
+                <span class="title">Personal Details</span>
+                <div class="input-field">
+                    <label>Full Name <span style="color: red;">*</span></label>
+                    <input type="text" placeholder="Enter your name" name="name" required>
+                </div>
+                <div class="input-field">
+                    <label>Date of Birth <span style="color: red;">*</span></label>
+                    <input type="date" name="dob" required>
+                </div>
+                <div class="input-field">
+                    <label>Email <span style="color: gray; font-size:10px;">(optional)</span></label>
+                    <input type="text" placeholder="Enter your email" name="email">
+                </div>
+                <div class="input-field">
+                    <label>Mobile Number <span style="color: red;">*</span></label>
+                    <input type="number" placeholder="Enter mobile number" name="mobile" required>
+                </div>
+                <div class="input-field">
+                    <label>Gender <span style="color: red;">*</span></label>
+                    <select required name="gender">
+                        <option disabled selected>Select gender</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Others</option>
+                    </select>
+                </div>
+                <div class="input-field">
+                    <label>Upload Your Image <span style="color: red;">*</span></label>
+                    <input type="file" required name="photo">
+                </div>
+            </div>
+            <div class="details ID">
+                <span class="title">Identity Details</span>
+                <div class="input-field">
+                    <label>ID Type <span style="color: gray; font-size:10px;">(optional)</span></label>
+                    <input type="text" placeholder="Enter ID type" name="idtype">
+                </div>
+                <div class="input-field">
+                    <label>VoterId Number <span style="color: red;">*</span></label>
+                    <input type="number" placeholder="Enter ID number" name="cnic" required>
+                </div>
+                <div class="input-field">
+                    <label>Issued Date <span style="color: red;">*</span></label>
+                    <input type="date" name="issue" required>
+                </div>
+                <div class="input-field">
+                    <label>Expiry Date <span style="color: gray; font-size:10px;">(optional)</span></label>
+                    <input type="date" name="expire">
+                </div>
+                <div class="input-field">
+                    <label>Create Password <span style="color: red;">*</span></label>
+                    <input type="password" placeholder="Create Password" name="pass" required>
+                </div>
+                <div class="input-field">
+                    <label>Confirm Password <span style="color: red;">*</span></label>
+                    <input type="password" placeholder="Confirm Password" name="cpass" required>
+                </div>
+            </div>
+            <button class="submit" type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

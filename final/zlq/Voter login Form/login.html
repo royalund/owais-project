@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Login Form</title>
+    <style>
+        body {
+            display: flex; /* Use flexbox to center the box */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            height: 100vh; /* Full viewport height */
+            background-image: url('../Dashboard/images/hola.gif');
+            margin: 0; /* Remove default margin */
+            background-color: #f0f0f0; /* Light gray background */
+        }
+
+        .login-box {
+            width: 350px; /* Width of the square box */
+            padding: 20px; /* Padding inside the box */
+            background-color: white; /* White background for the box */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+            border-radius: 8px; /* Rounded corners */
+            text-align: center; /* Center text */
+        }
+
+        input {
+            width: 100%; /* Full width for inputs */
+            max-width: 100%; /* Ensure inputs do not exceed the box width */
+            padding: 10px; /* Padding for inputs */
+            margin: 10px 0; /* Margin for spacing */
+            border: 1px solid #ccc; /* Border for inputs */
+            border-radius: 4px; /* Rounded corners for inputs */
+            box-sizing: border-box; /* Include padding and border in width */
+        }
+
+        button {
+            width: 100%; /* Full width for button */
+            padding: 10px; /* Padding for button */
+            background-color: #007bff; /* Button color */
+            color: white; /* Text color */
+            border: none; /* No border */
+            border-radius: 4px; /* Rounded corners for button */
+            cursor: pointer; /* Pointer cursor on hover */
+        }
+
+        button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <header>Login Form</header>
+        <form action="login.php" method="post">
+            <div>
+                <input type="text" placeholder="Enter ID No" name="cnic" required>
+            </div>
+
+            <div>
+                <input type="text" placeholder="Enter Mobile NO" name="mobile" required>
+            </div>
+
+            <div>
+                <input type="password" placeholder="Enter password" name="pass" required>
+            </div>
+
+            <div>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
